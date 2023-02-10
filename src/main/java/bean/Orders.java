@@ -1,15 +1,13 @@
 package bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "Orders")
 public class Orders {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     int id;
     @Column(name = "status_order_id")
@@ -20,6 +18,20 @@ public class Orders {
     String commentOrder;
     @Column(name = "total_price")
     float totalPrice;
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="id")
+    private Users users;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="status_order")
+    private StatusOrder statusOrder;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id")
+    private Basket basket;
+
 
     public int getId() {
         return id;

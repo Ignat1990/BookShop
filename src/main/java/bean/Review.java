@@ -1,14 +1,12 @@
 package bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Review")
 public class Review {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     int id;
     @Column(name = "book_id")
@@ -19,6 +17,10 @@ public class Review {
     String review;
     @Column(name = "rating_book")
     int ratingBook;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="review")
+    private Book book;
+
 
 
     public int getId() {

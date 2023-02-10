@@ -11,6 +11,7 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @JoinColumn(name = "book_id")
     private int id;
     @Column(name = "login")
     private String login;
@@ -26,8 +27,18 @@ public class Users {
     private int phone;
     @Column(name = "email")
     private String email;
+
     @Column(name = "user_role")
     private String userRole;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "name")
+    private Roles role;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="id")
+    private Review review;
+
     @Column(name = "user_ban")
     private boolean userBan;
 

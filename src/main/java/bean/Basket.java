@@ -1,14 +1,12 @@
 package bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Basket")
 public class Basket {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     int id;
     @Column(name = "book_id")
@@ -19,6 +17,10 @@ public class Basket {
     int quantity;
     @Column(name = "total_cost")
     float totalCost;
+
+    @OneToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name="id")
+    private Book book;
 
     public int getId() {
         return id;

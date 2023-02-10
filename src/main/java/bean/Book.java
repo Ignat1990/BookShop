@@ -1,9 +1,6 @@
 package bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Book")
@@ -15,7 +12,7 @@ public class Book {
     String nameBook;
     @Column(name="author")
     String author;
-    @Column(name = "book_gnre_id")
+    @Column(name = "book_ganre_id")
     String bookGanreId;
     @Column(name = "price")
     float price;
@@ -23,6 +20,11 @@ public class Book {
     int rating;
     @Column(name = "review")
     String review;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="id")
+    private BookGanre bookGanre;
+
 
     public int getId() {
         return id;
