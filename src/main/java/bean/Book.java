@@ -10,7 +10,7 @@ public class Book {
     int id;
     @Column(name = "name_book")
     String nameBook;
-    @Column(name="author")
+    @Column(name = "author")
     String author;
     @Column(name = "book_ganre_id")
     String bookGanreId;
@@ -22,7 +22,7 @@ public class Book {
     String review;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "id")
     private BookGanre bookGanre;
 
 

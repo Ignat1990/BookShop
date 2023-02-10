@@ -18,9 +18,8 @@ public class Review {
     @Column(name = "rating_book")
     int ratingBook;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="review")
+    @JoinColumn(name = "review")
     private Book book;
-
 
 
     public int getId() {

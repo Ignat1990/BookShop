@@ -11,8 +11,8 @@ public class BookGanre {
     int id;
     @Column(name = "title_name")
     String titleName;
-    @ManyToOne (fetch = FetchType.LAZY)
-    @JoinColumn(name="book_ganre_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "book_ganre_id")
     private Book book;
 
 

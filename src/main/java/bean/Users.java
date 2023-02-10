@@ -36,7 +36,7 @@ public class Users {
     private Roles role;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "id")
     private Review review;
 
     @Column(name = "user_ban")

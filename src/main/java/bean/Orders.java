@@ -21,11 +21,11 @@ public class Orders {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "id")
     private Users users;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="status_order")
+    @JoinColumn(name = "status_order")
     private StatusOrder statusOrder;
 
     @ManyToOne(fetch = FetchType.LAZY)
