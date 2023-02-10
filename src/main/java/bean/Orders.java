@@ -24,7 +24,7 @@ public class Orders {
     @JoinColumn(name = "id")
     private Users users;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status_order")
     private StatusOrder statusOrder;
 

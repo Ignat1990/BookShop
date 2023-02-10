@@ -18,9 +18,10 @@ public class Basket {
     @Column(name = "total_cost")
     float totalCost;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
     private Book book;
+
 
     public int getId() {
         return id;

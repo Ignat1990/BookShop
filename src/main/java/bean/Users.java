@@ -31,11 +31,11 @@ public class Users {
     @Column(name = "user_role")
     private String userRole;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "name")
     private Roles role;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
     private Review review;
 
