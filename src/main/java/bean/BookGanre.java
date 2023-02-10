@@ -1,6 +1,7 @@
 package bean;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "BookGanre")
@@ -8,12 +9,12 @@ public class BookGanre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int id;
+    private int id;
     @Column(name = "title_name")
-    String titleName;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "book_ganre_id")
-    private Book book;
+    private String titleName;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "bookGanre")
+    @JoinColumn(name = "id")
+    private List<Book> book;
 
 
     @Override

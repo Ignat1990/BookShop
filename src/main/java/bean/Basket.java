@@ -1,6 +1,7 @@
 package bean;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "Basket")
@@ -8,19 +9,23 @@ public class Basket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int id;
+    private int id;
     @Column(name = "book_id")
-    int bookId;
+    private int bookId;
     @Column(name = "order_id")
-    int orderId;
+    private int orderId;
     @Column(name = "quantity")
-    int quantity;
+    private int quantity;
     @Column(name = "total_cost")
-    float totalCost;
+    private float totalCost;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
     private Book book;
+
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "orders")
+    @JoinColumn(name = "id")
+    private List<Orders> orders;
 
 
     public int getId() {

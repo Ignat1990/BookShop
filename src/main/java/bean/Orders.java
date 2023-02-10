@@ -2,6 +2,7 @@ package bean;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Orders")
@@ -9,23 +10,23 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int id;
+    private int id;
     @Column(name = "status_order_id")
-    String statusOrderId;
+    private String statusOrderId;
     @Column(name = "data_order")
-    Date dataOrder;
+    private Date dataOrder;
     @Column(name = "comment_order")
-    String commentOrder;
+    private String commentOrder;
     @Column(name = "total_price")
-    float totalPrice;
+    private float totalPrice;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "orders_id")
     private Users users;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "status_order")
+    @OneToOne(fetch = FetchType.LAZY,  mappedBy = "orders")
+    @JoinColumn(name = "orders_id")
     private StatusOrder statusOrder;
 
     @ManyToOne(fetch = FetchType.LAZY)

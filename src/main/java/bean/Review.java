@@ -8,18 +8,22 @@ public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int id;
+    private int id;
     @Column(name = "book_id")
-    int bookId;
+    private int bookId;
     @Column(name = "user_id")
-    int userId;
+    private int userId;
     @Column(name = "review")
-    String review;
+    private String review;
     @Column(name = "rating_book")
-    int ratingBook;
+    private int ratingBook;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "review")
+    @JoinColumn(name = "review_id")
     private Book book;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "review_id")
+    private Users user;
 
 
     public int getId() {

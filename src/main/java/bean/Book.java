@@ -1,29 +1,38 @@
 package bean;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "Book")
 public class Book {
     @Id
     @Column(name = "id")
-    int id;
+    private int id;
     @Column(name = "name_book")
-    String nameBook;
+    private String nameBook;
     @Column(name = "author")
-    String author;
+    private String author;
     @Column(name = "book_ganre_id")
-    String bookGanreId;
+    private String bookGanreId;
     @Column(name = "price")
-    float price;
+    private float price;
     @Column(name = "rating")
-    int rating;
+    private int rating;
     @Column(name = "review")
-    String review;
+    private String review;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
     private BookGanre bookGanre;
+
+    @OneToMany (fetch = FetchType.LAZY, mappedBy = "book")
+    @JoinColumn(name = "book_id")
+    private List<Basket> basket;
+
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "book")
+    @JoinColumn(name = "id")
+    private List<Review> reviews;
 
 
     public int getId() {
