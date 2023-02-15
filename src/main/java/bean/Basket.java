@@ -10,22 +10,16 @@ public class Basket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    @Column(name = "book_id")
-    private int bookId;
-    @Column(name = "order_id")
-    private int orderId;
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Orders orders;
     @Column(name = "quantity")
     private int quantity;
     @Column(name = "total_cost")
     private float totalCost;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
-    private Book book;
-
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "orders")
-    @JoinColumn(name = "id")
-    private List<Orders> orders;
 
 
     public int getId() {
@@ -36,20 +30,20 @@ public class Basket {
         this.id = id;
     }
 
-    public int getBookId() {
-        return bookId;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public Orders getOrders() {
+        return orders;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setOrders(Orders orders) {
+        this.orders = orders;
     }
 
     public int getQuantity() {
@@ -72,10 +66,11 @@ public class Basket {
     public String toString() {
         return "Basket{" +
                 "id=" + id +
-                ", bookId=" + bookId +
-                ", orderId=" + orderId +
+                ", book=" + book +
+                ", orders=" + orders +
                 ", quantity=" + quantity +
                 ", totalCost=" + totalCost +
                 '}';
     }
+
 }

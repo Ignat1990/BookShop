@@ -14,9 +14,6 @@ public class Roles {
     @Column(name = "name")
     private String name;
 
-    @OneToOne(fetch = FetchType.LAZY,mappedBy = "roles")
-    @JoinColumn(name = "user_role")
-    private Users users;
 
     public Roles() {
 

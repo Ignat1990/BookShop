@@ -12,9 +12,6 @@ public class BookGanre {
     private int id;
     @Column(name = "title_name")
     private String titleName;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "bookGanre")
-    @JoinColumn(name = "id")
-    private List<Book> book;
 
 
     @Override

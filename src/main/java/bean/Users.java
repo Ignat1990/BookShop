@@ -34,17 +34,11 @@ public class Users {
     @Column(name = "user_ban")
     private boolean userBan;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_role")
     private Roles role;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "users")
-    @JoinColumn(name = "review_id")
-    private List<Review> review;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "users")
-    @JoinColumn(name = "orders_id")
-    private List<Orders> orders;
 
 
     public int getId() {

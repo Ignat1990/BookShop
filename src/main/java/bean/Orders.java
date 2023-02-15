@@ -11,8 +11,6 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    @Column(name = "status_order_id")
-    private String statusOrderId;
     @Column(name = "data_order")
     private Date dataOrder;
     @Column(name = "comment_order")
@@ -22,11 +20,11 @@ public class Orders {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "orders_id")
+    @JoinColumn(name = "users_id")
     private Users users;
 
-    @OneToOne(fetch = FetchType.LAZY,  mappedBy = "orders")
-    @JoinColumn(name = "orders_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "status_orders_id")
     private StatusOrder statusOrder;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -34,20 +32,25 @@ public class Orders {
     private Basket basket;
 
 
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "id=" + id +
+                ", dataOrder=" + dataOrder +
+                ", commentOrder='" + commentOrder + '\'' +
+                ", totalPrice=" + totalPrice +
+                ", users=" + users +
+                ", statusOrder=" + statusOrder +
+                ", basket=" + basket +
+                '}';
+    }
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getStatusOrderId() {
-        return statusOrderId;
-    }
-
-    public void setStatusOrderId(String statusOrderId) {
-        this.statusOrderId = statusOrderId;
     }
 
     public Date getDataOrder() {
@@ -74,14 +77,27 @@ public class Orders {
         this.totalPrice = totalPrice;
     }
 
-    @Override
-    public String toString() {
-        return "Orders{" +
-                "id=" + id +
-                ", statusOrderId='" + statusOrderId + '\'' +
-                ", dataOrder=" + dataOrder +
-                ", commentOrder='" + commentOrder + '\'' +
-                ", totalPrice=" + totalPrice +
-                '}';
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
+    }
+
+    public StatusOrder getStatusOrder() {
+        return statusOrder;
+    }
+
+    public void setStatusOrder(StatusOrder statusOrder) {
+        this.statusOrder = statusOrder;
+    }
+
+    public Basket getBasket() {
+        return basket;
+    }
+
+    public void setBasket(Basket basket) {
+        this.basket = basket;
     }
 }

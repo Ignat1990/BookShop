@@ -13,9 +13,7 @@ public class StatusOrder {
     private int id;
     @Column(name = "status_order")
     private String statusOrder;
-    @OneToOne(fetch = FetchType.LAZY,  mappedBy = "statusOrder")
-    @JoinColumn(name = "order_id")
-    private Orders orders;
+
 
 
     public int getId() {
