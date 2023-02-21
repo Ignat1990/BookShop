@@ -10,7 +10,7 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private long id;
     @Column(name = "data_order")
     private Date dataOrder;
     @Column(name = "comment_order")
@@ -20,12 +20,9 @@ public class Orders {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "users_id")
+    @JoinColumn(name = "id")
     private Users users;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "status_orders_id")
-    private StatusOrder statusOrder;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
@@ -40,13 +37,17 @@ public class Orders {
                 ", commentOrder='" + commentOrder + '\'' +
                 ", totalPrice=" + totalPrice +
                 ", users=" + users +
-                ", statusOrder=" + statusOrder +
+                ", statusOrder=" +
                 ", basket=" + basket +
                 '}';
     }
 
-    public int getId() {
+    public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setId(int id) {
@@ -85,13 +86,6 @@ public class Orders {
         this.users = users;
     }
 
-    public StatusOrder getStatusOrder() {
-        return statusOrder;
-    }
-
-    public void setStatusOrder(StatusOrder statusOrder) {
-        this.statusOrder = statusOrder;
-    }
 
     public Basket getBasket() {
         return basket;

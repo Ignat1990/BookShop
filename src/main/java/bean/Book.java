@@ -8,7 +8,7 @@ import java.util.List;
 public class Book {
     @Id
     @Column(name = "id")
-    private int id;
+    private long id;
     @Column(name = "name_book")
     private String nameBook;
     @Column(name = "author")
@@ -39,8 +39,12 @@ public class Book {
                 '}';
     }
 
-    public int getId() {
+    public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setId(int id) {

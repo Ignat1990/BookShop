@@ -12,11 +12,11 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    @JoinColumn(name = "book_id")
-    private int id;
+    @JoinColumn(name = "id")
+    private long id;
     @Column(name = "login")
     private String login;
-    @Column(name = "passwordHash")
+    @Column(name = "password_hash")
     private String passwordHash;
     @Column(name = "balance")
     private float balance;
@@ -28,9 +28,6 @@ public class Users {
     private int phone;
     @Column(name = "email")
     private String email;
-
-    @Column(name = "user_role")
-    private String userRole;
     @Column(name = "user_ban")
     private boolean userBan;
 
@@ -39,10 +36,12 @@ public class Users {
     private Roles role;
 
 
-
-
-    public int getId() {
+    public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setId(int id) {
@@ -105,13 +104,6 @@ public class Users {
         this.email = email;
     }
 
-    public String getUserRole() {
-        return userRole;
-    }
-
-    public void setUserRole(String userRole) {
-        this.userRole = userRole;
-    }
 
     public boolean isUserBan() {
         return userBan;
@@ -132,7 +124,6 @@ public class Users {
                 ", lastName='" + lastName + '\'' +
                 ", phone=" + phone +
                 ", email='" + email + '\'' +
-                ", userRole='" + userRole + '\'' +
                 ", userBan=" + userBan +
                 '}';
     }
@@ -142,11 +133,11 @@ public class Users {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Users users = (Users) o;
-        return id == users.id && Float.compare(users.balance, balance) == 0 && phone == users.phone && userBan == users.userBan && Objects.equals(login, users.login) && Objects.equals(passwordHash, users.passwordHash) && Objects.equals(firstName, users.firstName) && Objects.equals(lastName, users.lastName) && Objects.equals(email, users.email) && Objects.equals(userRole, users.userRole);
+        return id == users.id && Float.compare(users.balance, balance) == 0 && phone == users.phone && userBan == users.userBan && Objects.equals(login, users.login) && Objects.equals(passwordHash, users.passwordHash) && Objects.equals(firstName, users.firstName) && Objects.equals(lastName, users.lastName) && Objects.equals(email, users.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, login, passwordHash, balance, firstName, lastName, phone, email, userRole, userBan);
+        return Objects.hash(id, login, passwordHash, balance, firstName, lastName, phone, email, userBan);
     }
 }

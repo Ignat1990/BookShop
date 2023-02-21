@@ -9,7 +9,7 @@ public class BookGanre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private long id;
     @Column(name = "title_name")
     private String titleName;
 

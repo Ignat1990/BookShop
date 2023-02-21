@@ -9,7 +9,7 @@ public class Basket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private long id;
     @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
@@ -22,9 +22,7 @@ public class Basket {
     private float totalCost;
 
 
-    public int getId() {
-        return id;
-    }
+
 
     public void setId(int id) {
         this.id = id;
