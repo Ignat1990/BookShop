@@ -1,30 +1,43 @@
 package bean;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "Book")
 public class Book {
     @Id
     @Column(name = "id")
-    int id;
+    private int id;
     @Column(name = "name_book")
-    String nameBook;
-    @Column(name="author")
-    String author;
-    @Column(name = "book_ganre_id")
-    String bookGanreId;
+    private String nameBook;
+    @Column(name = "author")
+    private String author;
+
     @Column(name = "price")
-    float price;
+    private float price;
     @Column(name = "rating")
-    int rating;
+    private int rating;
     @Column(name = "review")
-    String review;
+    private String review;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "book_ganre_id")
     private BookGanre bookGanre;
 
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", nameBook='" + nameBook + '\'' +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                ", rating=" + rating +
+                ", review='" + review + '\'' +
+                ", bookGanre=" + bookGanre +
+                '}';
+    }
 
     public int getId() {
         return id;
@@ -48,14 +61,6 @@ public class Book {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public String getBookGanreId() {
-        return bookGanreId;
-    }
-
-    public void setBookGanreId(String bookGanreId) {
-        this.bookGanreId = bookGanreId;
     }
 
     public float getPrice() {
@@ -82,16 +87,11 @@ public class Book {
         this.review = review;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", nameBook='" + nameBook + '\'' +
-                ", author='" + author + '\'' +
-                ", bookGanreId='" + bookGanreId + '\'' +
-                ", price=" + price +
-                ", rating=" + rating +
-                ", review='" + review + '\'' +
-                '}';
+    public BookGanre getBookGanre() {
+        return bookGanre;
+    }
+
+    public void setBookGanre(BookGanre bookGanre) {
+        this.bookGanre = bookGanre;
     }
 }

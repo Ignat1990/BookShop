@@ -1,6 +1,7 @@
 package bean;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -9,9 +10,10 @@ public class StatusOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int id;
-    @Column(name="status_order")
-    String statusOrder;
+    private int id;
+    @Column(name = "status_order")
+    private String statusOrder;
+
 
 
     public int getId() {

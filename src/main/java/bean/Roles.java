@@ -1,6 +1,7 @@
 package bean;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -9,9 +10,10 @@ public class Roles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int id;
-    @Column(name="name")
-    String name;
+    private int id;
+    @Column(name = "name")
+    private String name;
+
 
     public Roles() {
 

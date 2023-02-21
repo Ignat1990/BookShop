@@ -2,6 +2,7 @@ package bean;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Orders")
@@ -9,23 +10,21 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int id;
-    @Column(name = "status_order_id")
-    String statusOrderId;
+    private int id;
     @Column(name = "data_order")
-    Date dataOrder;
+    private Date dataOrder;
     @Column(name = "comment_order")
-    String commentOrder;
+    private String commentOrder;
     @Column(name = "total_price")
-    float totalPrice;
+    private float totalPrice;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "users_id")
     private Users users;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="status_order")
+    @JoinColumn(name = "status_orders_id")
     private StatusOrder statusOrder;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -33,20 +32,25 @@ public class Orders {
     private Basket basket;
 
 
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "id=" + id +
+                ", dataOrder=" + dataOrder +
+                ", commentOrder='" + commentOrder + '\'' +
+                ", totalPrice=" + totalPrice +
+                ", users=" + users +
+                ", statusOrder=" + statusOrder +
+                ", basket=" + basket +
+                '}';
+    }
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getStatusOrderId() {
-        return statusOrderId;
-    }
-
-    public void setStatusOrderId(String statusOrderId) {
-        this.statusOrderId = statusOrderId;
     }
 
     public Date getDataOrder() {
@@ -73,14 +77,27 @@ public class Orders {
         this.totalPrice = totalPrice;
     }
 
-    @Override
-    public String toString() {
-        return "Orders{" +
-                "id=" + id +
-                ", statusOrderId='" + statusOrderId + '\'' +
-                ", dataOrder=" + dataOrder +
-                ", commentOrder='" + commentOrder + '\'' +
-                ", totalPrice=" + totalPrice +
-                '}';
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
+    }
+
+    public StatusOrder getStatusOrder() {
+        return statusOrder;
+    }
+
+    public void setStatusOrder(StatusOrder statusOrder) {
+        this.statusOrder = statusOrder;
+    }
+
+    public Basket getBasket() {
+        return basket;
+    }
+
+    public void setBasket(Basket basket) {
+        this.basket = basket;
     }
 }

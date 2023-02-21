@@ -1,6 +1,7 @@
 package bean;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "Basket")
@@ -8,19 +9,18 @@ public class Basket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int id;
-    @Column(name = "book_id")
-    int bookId;
-    @Column(name = "order_id")
-    int orderId;
-    @Column(name = "quantity")
-    int quantity;
-    @Column(name = "total_cost")
-    float totalCost;
-
-    @OneToOne (fetch = FetchType.LAZY)
-    @JoinColumn(name="id")
+    private int id;
+    @ManyToOne
+    @JoinColumn(name = "book_id")
     private Book book;
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Orders orders;
+    @Column(name = "quantity")
+    private int quantity;
+    @Column(name = "total_cost")
+    private float totalCost;
+
 
     public int getId() {
         return id;
@@ -30,20 +30,20 @@ public class Basket {
         this.id = id;
     }
 
-    public int getBookId() {
-        return bookId;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public Orders getOrders() {
+        return orders;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setOrders(Orders orders) {
+        this.orders = orders;
     }
 
     public int getQuantity() {
@@ -66,10 +66,11 @@ public class Basket {
     public String toString() {
         return "Basket{" +
                 "id=" + id +
-                ", bookId=" + bookId +
-                ", orderId=" + orderId +
+                ", book=" + book +
+                ", orders=" + orders +
                 ", quantity=" + quantity +
                 ", totalCost=" + totalCost +
                 '}';
     }
+
 }

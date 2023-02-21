@@ -3,6 +3,7 @@ package bean;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -30,17 +31,14 @@ public class Users {
 
     @Column(name = "user_role")
     private String userRole;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "name")
-    private Roles role;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="id")
-    private Review review;
-
     @Column(name = "user_ban")
     private boolean userBan;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_role")
+    private Roles role;
+
+
 
 
     public int getId() {
