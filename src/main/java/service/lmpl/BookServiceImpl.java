@@ -9,6 +9,7 @@ import repository.BookRepository;
 import service.BookService;
 
 import java.util.List;
+
 @Service
 public class BookServiceImpl implements BookService {
 
@@ -51,7 +52,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public void saveBook(Book book) {
         bookRepository.save(book);
-        log.info("Book save " + book);
+
 
 
     }
@@ -59,7 +60,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public void deleteBook(Long id) {
         bookRepository.deleteById(id);
-        log.info("Book delete ");
+
     }
     public Book findBook(Orders orders){
         Basket basket = basketRepository.getOne(orders.getId());

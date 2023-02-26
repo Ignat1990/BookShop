@@ -6,9 +6,11 @@ import repository.BasketRepository;
 import repository.BookRepository;
 import service.BasketService;
 
+import java.awt.*;
 import java.util.List;
 
-import static java.awt.Container.log;
+import static org.aspectj.bridge.MessageUtil.MESSAGE_ALL;
+import static org.aspectj.bridge.MessageUtil.info;
 
 @Service
 public class BasketServiceImpl implements BasketService {
@@ -23,28 +25,39 @@ public class BasketServiceImpl implements BasketService {
         this.basketRepository = basketRepository;
     }
 
-    @Override
+
     public List<Basket> getAllBasket() {
         return basketRepository.findAll();
     }
 
     @Override
-    public void deleteBasket(Long id) {
-        Basket basket =   basketRepository.getOne(id);
-        basketRepository.delete(basket);
-        log.info("basket delete " + basket);
-
+    public List<Basket> findAll() {
+        return null;
     }
 
     @Override
-    public Basket addBookInBasket(Basket basket) {
-        log.info("book add in basket " + basket);
+    public void delete(Long id) {
+        Basket basket =   basketRepository.getOne(id);
+        basketRepository.delete(basket);
+
+    }
+
+    public BookRepository getBookRepository() {
+        return bookRepository;
+    }
+
+    public BasketRepository getBasketRepository() {
+        return basketRepository;
+    }
+
+    @Override
+    public Basket save(Basket basket) {
         return basketRepository.save(basket);
 
     }
 
     @Override
-    public Basket getBasket(Long id) {
+    public Basket find(Long id) {
         return basketRepository.getOne(id);
     }
 

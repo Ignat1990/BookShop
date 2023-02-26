@@ -11,6 +11,8 @@ protected RolesRepository rolesRepository;
 @Autowired
 protected PasswordEncoder passwordEncoder;
 
+
+
 /*@Override
 public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     @ @ -57, 7 + 57, 7 @@public boolean deleteUser (Long userId){

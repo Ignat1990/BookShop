@@ -2,7 +2,6 @@ package bean;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "Orders")
@@ -58,7 +57,7 @@ public class Orders {
         return dataOrder;
     }
 
-    public void setDataOrder(Date dataOrder) {
+    public void setDataOrder() {
         this.dataOrder = dataOrder;
     }
 

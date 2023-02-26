@@ -5,9 +5,9 @@ import java.util.List;
 
 
     public interface BasketService {
-        public List<Basket> getAllBasket();
-        public void deleteBasket(Long id);
-        public Basket addBookInBasket(Basket basket);
-        public Basket getBasket(Long id);
+         List<Basket> findAll();
+       public void delete(Long id);
+        public Basket save(Basket basket);
+        public Basket find(Long id);
     }
 
