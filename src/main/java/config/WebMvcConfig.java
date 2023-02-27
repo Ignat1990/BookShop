@@ -17,7 +17,7 @@ import java.util.Locale;
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
     @Bean
-    public LocaleResolver localeResolver(){
+    public LocaleResolver localeResolver() {
         SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
         sessionLocaleResolver.setDefaultLocale(Locale.ENGLISH);
         sessionLocaleResolver.setLocaleAttributeName("session.current.locale");
@@ -32,12 +32,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
         return localeChangeInterceptor;
     }
+
     @Override
-    public void addViewControllers (ViewControllerRegistry registry) {
+    public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/login").setViewName("login");
     }
+
     @Bean
-    public MessageSource messageSource(){
+    public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("language/messages");
         messageSource.setDefaultEncoding("UTF-8");

@@ -22,8 +22,6 @@ public class Basket {
     private float totalCost;
 
 
-
-
     public void setId(int id) {
         this.id = id;
     }

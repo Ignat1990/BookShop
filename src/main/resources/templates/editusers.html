@@ -31,11 +31,16 @@
     <th>Операция</th>
     </thead>
     <tr th:each="user: ${allUsers}">
-      <td th:text="${user.id}"</td>
-      <td th:text="${user.login}"</td>
-      <td th:text="${user.username}"</td>
-      <td th:text="${user.password}"</td>
-      <td th:text="${user.getRoles()}"</td>
+      <td th:text="${user.id}"
+      </td>
+      <td th:text="${user.login}"
+      </td>
+      <td th:text="${user.username}"
+      </td>
+      <td th:text="${user.password}"
+      </td>
+      <td th:text="${user.getRoles()}"
+      </td>
       <td>
         <form>
           <button type="submit" th:formaction="@{/admin/user/delete/{id}(id=${user.getId()})}">Delete</button>

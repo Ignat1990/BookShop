@@ -36,7 +36,7 @@ public class OrdersServiceImpl implements OrdersService {
     final
     OrdersRepository orderRepository;
 
-    public OrdersServiceImpl(UsersRepository usersRepository, OrdersRepository ordersRepository, BookRepository bookRepository, BasketRepository basketRepository, UsersServiceImpl userServicelmpl, BookServiceImpl bookService, BasketServiceImpl basketService, UserDetailsServiceImpl userDetailsService) {
+    public OrdersServiceImpl(UsersRepository usersRepository, OrdersRepository ordersRepository, BookRepository bookRepository, BasketRepository basketRepository, UsersServiceImpl userServicelmpl, BookServiceImpl bookService, BasketServiceImpl basketService) {
         this.usersRepository = usersRepository;
         this.orderRepository = ordersRepository;
         this.bookRepository = bookRepository;
@@ -75,18 +75,18 @@ public class OrdersServiceImpl implements OrdersService {
 
 
     @Override
-    public List<String> sent(Orders order) {
-        Users newUser = usersServicelmpl.findUser(order);
-        newUser.setBalance(newUser.getBalance() - bookService.findBook(order).getPrice());
+    public List<String> sent(Orders orders) {
+        Users newUser = usersServicelmpl.findUser(orders);
+        newUser.setBalance(newUser.getBalance() - bookService.findBook(orders).getPrice());
         List<String> list = new ArrayList<>();
-        String user = usersServicelmpl.findUser(order).toString();
-        String  book = bookService.findBook(order).toString();
+        String user = usersServicelmpl.findUser(orders).toString();
+        String  book = bookService.findBook(orders).toString();
         list.add(user);
         list.add(book);
-        order.setStatus(sent);
-        orderRepository.save(order);
-        Basket basket = basketService.getBasket(order.getIdBasket());
-        basketService.delete(basket.getId());
+        orders.setDataOrder();
+        orderRepository.save(orders);
+        Basket basket = basketService.getBasketRepository().getById(orders.getId());
+        basketService.delete(basket.getOrders().getId());
         return list;
     }
 
