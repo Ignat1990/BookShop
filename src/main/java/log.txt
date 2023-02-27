@@ -1,5 +1,5 @@
-2023-02-23 09:40:20.667  INFO 10244 --- [main] b.bookshop.bookshop.BookshopApplication  : Starting BookshopApplication on DESKTOP-KDE00AA with PID 10244 (started by Виктор in C:\Users\Виктор\IdeaProjects\bookshop)
-2023-02-23 09:40:20.685  INFO 10244 --- [main] b.bookshop.bookshop.BookshopApplication  : No active profile set, falling back to default profiles: default
+2023-02-23 09:40:20.667  INFO 10244 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : Starting ignatProject.BookshopApplication on DESKTOP-KDE00AA with PID 10244 (started by Виктор in C:\Users\Виктор\IdeaProjects\bookshop)
+2023-02-23 09:40:20.685  INFO 10244 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : No active profile set, falling back to default profiles: default
 2023-02-23  09:40:21.588  INFO 10244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2023-02-23  09:40:21.690  INFO 10244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 4 JPA repository interfaces.
 2023-02-23 09:40:22.334  INFO 10244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
@@ -63,7 +63,7 @@ java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
-	at by.bookshop.bookshop.BookshopApplication.main(BookshopApplication.java:10) ~[classes/:na]
+	at by.bookshop.bookshop.ignatProject.BookshopApplication.main(ignatProject.BookshopApplication.java:10) ~[classes/:na]
 
 2020-03-31 09:40:23.819  INFO 10244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
 2020-03-31 09:40:23.905  INFO 10244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
@@ -125,7 +125,7 @@ java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
-	at by.bookshop.bookshop.BookshopApplication.main(BookshopApplication.java:10) ~[classes/:na]
+	at by.bookshop.bookshop.ignatProject.BookshopApplication.main(ignatProject.BookshopApplication.java:10) ~[classes/:na]
 
 2020-03-31 09:40:25.198  WARN 10244 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : Public Key Retrieval is not allowed
 2020-03-31 09:40:25.218  INFO 10244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
@@ -180,14 +180,14 @@ java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
-	at by.bookshop.bookshop.BookshopApplication.main(BookshopApplication.java:10) ~[classes/:na]
+	at by.bookshop.bookshop.ignatProject.BookshopApplication.main(ignatProject.BookshopApplication.java:10) ~[classes/:na]
 
 2020-03-31 09:40:27.537  WARN 10244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-03-31 09:40:27.743  INFO 10244 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-03-31 09:40:28.425  INFO 10244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-03-31 09:40:28.427  INFO 10244 --- [main] b.bookshop.bookshop.BookshopApplication  : Started BookshopApplication in 8.108 seconds (JVM running for 8.958)
-2020-03-31 09:41:17.033  INFO 9284 --- [main] b.bookshop.bookshop.BookshopApplication  : Starting BookshopApplication on DESKTOP-KDE00AA with PID 9284 (started by Виктор in C:\Users\Виктор\IdeaProjects\bookshop)
-2020-03-31 09:41:17.036  INFO 9284 --- [main] b.bookshop.bookshop.BookshopApplication  : No active profile set, falling back to default profiles: default
+2020-03-31 09:40:28.427  INFO 10244 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : Started ignatProject.BookshopApplication in 8.108 seconds (JVM running for 8.958)
+2020-03-31 09:41:17.033  INFO 9284 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : Starting ignatProject.BookshopApplication on DESKTOP-KDE00AA with PID 9284 (started by Виктор in C:\Users\Виктор\IdeaProjects\bookshop)
+2020-03-31 09:41:17.036  INFO 9284 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : No active profile set, falling back to default profiles: default
 2020-03-31 09:41:18.083  INFO 9284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2020-03-31 09:41:18.175  INFO 9284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 4 JPA repository interfaces.
 2020-03-31 09:41:18.701  INFO 9284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
@@ -207,7 +207,7 @@ java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
 2020-03-31 09:41:20.526  WARN 9284 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-03-31 09:41:20.652  INFO 9284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-03-31 09:41:21.052  INFO 9284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-03-31 09:41:21.054  INFO 9284 --- [main] b.bookshop.bookshop.BookshopApplication  : Started BookshopApplication in 4.435 seconds (JVM running for 5.277)
+2020-03-31 09:41:21.054  INFO 9284 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : Started ignatProject.BookshopApplication in 4.435 seconds (JVM running for 5.277)
 2020-03-31 09:42:19.107  INFO 9284 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-03-31 09:42:19.108  INFO 9284 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-03-31 09:42:19.141  INFO 9284 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
@@ -671,8 +671,8 @@ by.bookshop.bookshop.exception.AuthException: login  already exist
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
 	at java.base/java.lang.Thread.run(Thread.java:830) ~[na:na]
 
-2020-03-31 15:09:43.015  INFO 5968 --- [main] b.bookshop.bookshop.BookshopApplication  : Starting BookshopApplication on DESKTOP-KDE00AA with PID 5968 (started by Виктор in C:\Users\Виктор\IdeaProjects\bookshop)
-2020-03-31 15:09:43.015  INFO 5968 --- [main] b.bookshop.bookshop.BookshopApplication  : No active profile set, falling back to default profiles: default
+2020-03-31 15:09:43.015  INFO 5968 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : Starting ignatProject.BookshopApplication on DESKTOP-KDE00AA with PID 5968 (started by Виктор in C:\Users\Виктор\IdeaProjects\bookshop)
+2020-03-31 15:09:43.015  INFO 5968 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : No active profile set, falling back to default profiles: default
 2020-03-31 15:09:43.843  INFO 5968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2020-03-31 15:09:43.953  INFO 5968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 4 JPA repository interfaces.
 2020-03-31 15:09:44.562  INFO 5968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
@@ -713,8 +713,8 @@ The dependencies of some of the beans in the application context form a cycle:
 └─────┘
 
 
-2020-03-31 15:15:53.842  INFO 572 --- [main] b.bookshop.bookshop.BookshopApplication  : Starting BookshopApplication on DESKTOP-KDE00AA with PID 572 (started by Виктор in C:\Users\Виктор\IdeaProjects\bookshop)
-2020-03-31 15:15:53.842  INFO 572 --- [main] b.bookshop.bookshop.BookshopApplication  : No active profile set, falling back to default profiles: default
+2020-03-31 15:15:53.842  INFO 572 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : Starting ignatProject.BookshopApplication on DESKTOP-KDE00AA with PID 572 (started by Виктор in C:\Users\Виктор\IdeaProjects\bookshop)
+2020-03-31 15:15:53.842  INFO 572 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : No active profile set, falling back to default profiles: default
 2020-03-31 15:15:55.077  INFO 572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2020-03-31 15:15:55.170  INFO 572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84ms. Found 4 JPA repository interfaces.
 2020-03-31 15:15:55.686  INFO 572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
@@ -734,7 +734,7 @@ The dependencies of some of the beans in the application context form a cycle:
 2020-03-31 15:15:57.498  WARN 572 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2020-03-31 15:15:57.623  INFO 572 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-03-31 15:15:58.014  INFO 572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-03-31 15:15:58.014  INFO 572 --- [main] b.bookshop.bookshop.BookshopApplication  : Started BookshopApplication in 4.59 seconds (JVM running for 5.312)
+2020-03-31 15:15:58.014  INFO 572 --- [main] b.bookshop.bookshop.ignatProject.BookshopApplication  : Started ignatProject.BookshopApplication in 4.59 seconds (JVM running for 5.312)
 2020-03-31 15:16:18.255  INFO 572 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-03-31 15:16:18.255  INFO 572 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-03-31 15:16:18.270  INFO 572 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms

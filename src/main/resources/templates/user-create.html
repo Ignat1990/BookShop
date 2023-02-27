@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание клиента</title>
+</head>
+<body>
+<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+    <label for="name">name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+    <label for="login">login</label>
+    <input type="text" th:field="*{login}" id="login" placeholder="Login">
+    <label for="pass">pass</label>
+    <input type="text" th:field="*{pass}" id="pass" placeholder="Password">
+    <label for="email">email</label>
+    <input type="text" th:field="*{email}" id="email" placeholder="Email">
+
+    <input type="submit" value="Create User">
+</form>
+</body>
+</html>
+
+
+
+
