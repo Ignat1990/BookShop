@@ -1,7 +1,9 @@
 package ignatProject.repository;
 
-import ignatProject.bean.Review;
+import ignatProject.model.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ReviewRepository extends JpaRepository<Review, Long> {
+
+    Review findByTitle(String title);
 }

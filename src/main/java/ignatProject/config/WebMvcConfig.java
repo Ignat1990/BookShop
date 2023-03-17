@@ -1,5 +1,5 @@
-/*
-package config;
+
+package ignatProject.config;
 
 
 import org.springframework.context.MessageSource;
@@ -21,7 +21,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public LocaleResolver localeResolver() {
         SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
         sessionLocaleResolver.setDefaultLocale(Locale.ENGLISH);
-        sessionLocaleResolver.setLocaleAttributeName("session.current.locale");
+
 
         return sessionLocaleResolver;
     }
@@ -30,7 +30,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public LocaleChangeInterceptor localeChangeInterceptor() {
         LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
         localeChangeInterceptor.setParamName("lang");
-
         return localeChangeInterceptor;
     }
 
@@ -42,7 +41,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Bean
     public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-        messageSource.setBasename("language/messages");
+        messageSource.setBasename("classpath:language/messages");
         messageSource.setDefaultEncoding("UTF-8");
         return messageSource;
     }
@@ -51,5 +50,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
     }
+
+
 }
-*/

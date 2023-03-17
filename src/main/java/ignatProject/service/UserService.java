@@ -1,11 +1,24 @@
 package ignatProject.service;
 
 
-import ignatProject.bean.Orders;
+import ignatProject.model.User;
+
+public interface UserService {
+
+    User save(User user);
+
+    User findByEmail(String email);
+
+    User findUserByUsername(String username);
+
+}
+
+/*import ignatProject.bean.Orders;
 import ignatProject.bean.Users;
 
-import java.util.List;
+import java.util.List;*/
 
+/*
 public interface UserService {
     public Users findById(Long id);
     public List<Users> findAllUsers();
@@ -15,4 +28,4 @@ public interface UserService {
     public Users findUser(Orders order);
     public boolean login(String token);
     public Users findUserByLoginAndPassword(String login, String password);
-}
+}*/
