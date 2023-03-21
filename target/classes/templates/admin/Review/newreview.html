@@ -58,12 +58,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col align-items-center" style="text-align: left;">
-        <form method="post" th:action="@{/book/{id}/newreview" th:object="${newReviewForm}">
+        <form method="post" th:action="@{/book/{id}/newreview}" th:object="${newReviewForm}">
           <label for="name">Введите название отзыва: </label>
           <input type="text"  th:field="*{title}" name="name" id="name">
           <br>
           <label for="review">Отзыв: </label>
-          <textarea name="review"  th:value="${content}"  id="review" ></textarea>
+          <textarea name="review"  th:value="${constant}"  id="review" ></textarea>
 
 </form>
       </div>

@@ -90,7 +90,7 @@
             <td th:text="${book.id}"</td>
             <td> <img th:src="${book.getImageUrl()}" height="111"></td>
             <td> <a th:href="@{/admin/book/edit/{id}(id=${book.getId()})}" th:text="${book.name}"</a></td>
-            <td th:text="${book.bookGange}"</td>
+            <td th:text="${book.bookGanre}"</td>
             <td th:text="${book.author}"</td>
             <td th:text="${book.supplier}"</td>
             <td th:text="${book.description}"</td>

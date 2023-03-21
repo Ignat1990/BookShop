@@ -24,7 +24,7 @@ public class Book {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "book_ganre_id")
-    private BookGanre bookGange;
+    private BookGanre bookGanre;
 
     @Column(name = "description")
     private String description;
@@ -78,12 +78,12 @@ public class Book {
         this.name = name;
     }
 
-    public BookGanre getBookGange() {
-        return bookGange;
+    public BookGanre getBookGanre() {
+        return bookGanre;
     }
 
-    public void setBookGange(BookGanre bookGange) {
-        this.bookGange = bookGange;
+    public void setBookGanre(BookGanre bookGanre) {
+        this.bookGanre = bookGanre;
     }
 
     public String getDescription() {
@@ -155,12 +155,12 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return id == book.id && quantity == book.quantity && rating == book.rating && usersvote == book.usersvote && Objects.equals(supplier, book.supplier) && Objects.equals(name, book.name) && Objects.equals(bookGange, book.bookGange) && Objects.equals(description, book.description) && Objects.equals(imageUrl, book.imageUrl) && Objects.equals(author, book.author) && Objects.equals(price, book.price) && Objects.equals(reviews, book.reviews);
+        return id == book.id && quantity == book.quantity && rating == book.rating && usersvote == book.usersvote && Objects.equals(supplier, book.supplier) && Objects.equals(name, book.name) && Objects.equals(bookGanre, book.bookGanre) && Objects.equals(description, book.description) && Objects.equals(imageUrl, book.imageUrl) && Objects.equals(author, book.author) && Objects.equals(price, book.price) && Objects.equals(reviews, book.reviews);
     }*/
 
     /*@Override
     public int hashCode() {
-        return Objects.hash(id, supplier, name, bookGange, description, imageUrl, author, price, quantity, reviews, rating, usersvote);
+        return Objects.hash(id, supplier, name, bookGanre, description, imageUrl, author, price, quantity, reviews, rating, usersvote);
     }*/
 
     @Override
@@ -169,7 +169,7 @@ public class Book {
                 "id=" + id +
                 ", supplier=" + supplier +
                 ", name='" + name + '\'' +
-                ", bookGange=" + bookGange +
+                ", bookGange=" + bookGanre +
                 ", description='" + description + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", author=" + author +

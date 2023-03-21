@@ -32,7 +32,7 @@ public class BookGanreController {
     @PostMapping
     public String newBookGanre(@ModelAttribute("newBookGanreForm") BookGanre newBookGanreForm, Model model) {
 
-        if (!bookGanreServiceImpl.saveBookGanre( newBookGanreForm)) {
+        if (!bookGanreServiceImpl.saveBookGanre(newBookGanreForm)) {
             model.addAttribute("bookGanreError", "This book ganre is taken");
             return "admin/bookganre/bookGanre";
         }
@@ -49,7 +49,7 @@ public class BookGanreController {
     @GetMapping("/edit/{id}")
     public String editBookGanre(@PathVariable("id") long id, Model model) {
         if (!bookGanreRepository.existsById(id)) {
-            return "redirect:admin/bookGпanre";
+            return "redirect:admin/bookGanre";
         }
         BookGanre bookGanre = bookGanreRepository.findById(id).get();
         ArrayList<BookGanre> editBookGanre = new ArrayList<>();

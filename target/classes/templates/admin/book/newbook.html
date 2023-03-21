@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group">
                         <label th:text="#{book.bookGanre}"></label>
-                        <select class="form-control input-lg" th:field="*{bookGange}" name="bookGanre" autofocus="true">
+                        <select class="form-control input-lg" th:field="*{bookGanre}" name="bookGanre" autofocus="true">
                             <option value="0">select</option>
                             <option th:each="bok : ${bookGanres}" th:value="${bok.getId()}"
                                     th:text="${bok.getName()}"></option>

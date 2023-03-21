@@ -53,7 +53,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> findAllByBookGanreId(long bookGanreId) {
-        return bookRepository.findAllByBookGange_Id(bookGanreId);
+        return bookRepository.findAllByBookGanre_Id(bookGanreId);
     }
 
     @Override

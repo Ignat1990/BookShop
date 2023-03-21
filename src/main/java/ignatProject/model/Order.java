@@ -106,17 +106,5 @@ public class Order {
         return Objects.hash(id, user, basket, status, grand_total, dateoforder, description);
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", user=" + user +
-                ", basket=" + basket +
-                ", status='" + status + '\'' +
-                ", grand_total=" + grand_total +
-                ", dateoforder=" + dateoforder +
-                ", description='" + description + '\'' +
-                '}';
-    }
 
 }

@@ -67,7 +67,6 @@
     <th>ID</th>
     <th>Login</th>
     <th>UserName</th>
-    <th>Password</th>
     <th>Roles</th>
     <th>Registration</th>
     <th>Операция</th>
@@ -76,7 +75,6 @@
           <td th:text="${user.id}"></td>
           <td> <a th:href="@{/admin/editusers/{id}(id=${user.getId()})}" th:text="${user.login}"</a></td>
           <td th:text="${user.username}"></td>
-          <td th:text="${user.password}"></td>
           <td th:text="${user.getRoles()}"></td>
           <td th:text="${user.registered_at}"></td>
           <td>

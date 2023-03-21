@@ -64,7 +64,7 @@ public class CartController {
             shoppingCartServiceImpl.addBook(book);
             logger.debug(String.format("Book with id: %s added to shopping cart.", id));
         }
-        String red = "redirect:/searchByBookGanre/" + book.getBookGange().getId();
+        String red = "redirect:/searchByBookGanre/" + book.getBookGanre().getId();
         System.out.println(red);
         return red;
     }

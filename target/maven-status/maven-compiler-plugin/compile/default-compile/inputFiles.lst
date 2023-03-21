@@ -1,7 +1,5 @@
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/UserService.java
-/Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/UserDetailsService.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/CartController.java
-/Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/UserControllerBuilder.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/impl/OrderServiceImpl.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/BookController.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/enumm/Status.java
@@ -9,6 +7,7 @@
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/HomeController.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/impl/ReviewServiceImpl.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/exception/NotFoundException.java
+/Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/validator/UserValidator.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/ReviewService.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/model/Supplier.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/model/Review.java
@@ -17,16 +16,14 @@
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/impl/SupplierServiceImpl.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/repository/ReviewRepository.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/BookService.java
+/Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/validator/BookValidator.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/model/Order.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/ReviewController.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/repository/BookGanreRepository.java
-/Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/TestControllers.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/BookshopApplication.java
-/Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/impl/UsersServiceImpl.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/exception/NotMoneyException.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/impl/ShoppingCartServiceImpl.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/OrderController.java
-/Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/impl/BasketServiceImpl.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/UserController.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/repository/BookRepository.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/repository/OrderRepository.java
@@ -51,7 +48,6 @@
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/repository/BasketRepository.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/model/Book.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/service/OrderService.java
-/Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/LoginController.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/model/User.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/model/Role.java
 /Users/macbookpro/Downloads/BookShop/src/main/java/ignatProject/controllers/RegistrationController.java
