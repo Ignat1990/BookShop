@@ -1,0 +1,54 @@
+<!--lang="en"-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+
+<head th:replace="fragments/header :: header-css">
+</head>
+<body>
+<!--<p th:text="${bookGanre.getName()}"></p>-->
+
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container">
+    <div class="row">
+        <nav class="side-menu">
+            <h3><span th:text="#{book.bookGanre}"</span></h3>
+            <ul>
+                <li><p th:text="${bookGanre.getName()}"></p></li>
+            </ul>
+
+        </nav>
+
+<!--        <button sec:authorize="hasRole('ROLE_ADMIN')" class="btn">-->
+<!--            <a th:href="@{admin/book/new}"><i class="fas fa-plus fa-2x"></i></a>-->
+<!--        </button>-->
+        <div class="col card-deck ml-5 my-3" th:if="${!bookBookGanre.isEmpty()}" >
+            <div class="card" th:each="book : ${bookBookGanre}">
+                <div sec:authorize="hasRole('ROLE_ADMIN')" class="admin">
+                    <button class="btn">
+                        <a th:href="@{'admin/book/delete/' + ${book.getId()}}" ><i class="fas fa-times"></i></a>
+                    </button>
+                    <button class="btn">
+                        <a th:href="@{'admin/book/edit/' + ${book.getId()}}" ><i class="fas fa-wrench"></i></a>
+                    </button>
+                </div>
+                <img class="card-img-top" th:if="${!book.getImageUrl().isEmpty()}" th:src="${book.getImageUrl()}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title" th:text="${book.getName()}"></h4>
+                    <p class="card-text" th:text="${book.getDescription()}"></p>
+                </div>
+                <div class="card-footer">
+                    <p th:text="${book.getPrice()}"></p>
+                    <a th:href="${'/cartfrombookGanre/add/' + book.getId()}" class="btn btn-lg btn-outline-info btn-block" th:text="#{book.add}" ></a>
+                </div>
+            </div>
+        </div>
+<!--        <div>-->
+<!--            <span th:text="#{book.count} + ' ' + ${booksCount}"></span>-->
+<!--        </div>-->
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
