@@ -1,0 +1,1 @@
+As part of my graduation project, I implemented an online-store using Spring. In the project I used Spring Boot, Spring Security 5, Spring Data JPA with MySql database, for views I used Thymeleaf template and Bootstrap CSS framework. Tests are made on JUnit 5 with test H2 database. For accelerated development, I used Spring BootDevTools.
