@@ -74,9 +74,7 @@ public class BookController {
         if (!bookRepository.existsById(id)) {
             return "redirect:admin/book";
         }
-        /*Book book = bookRepository.findById(id).get();
-        ArrayList<Book> editBook = new ArrayList<>();
-        editBook.add(book);*/
+
         model.addAttribute("editBook", bookRepository.findById(id).get());
         model.addAttribute("bookGanres", bookServiceImpl.findAll());
         model.addAttribute("author", authorServiceImpl.findAll());
@@ -88,8 +86,7 @@ public class BookController {
     @PostMapping("/edit/{id}")
     @Transactional
     public String updateBook(@PathVariable("id") long id, @ModelAttribute("editBook") Book editBook) {
-        /*Book book = bookRepository.findById(id).get();
-        bookRepository.save(book);*/
+
         bookServiceImpl.updateBook(id, editBook);
         return "redirect:/admin/book";
     }

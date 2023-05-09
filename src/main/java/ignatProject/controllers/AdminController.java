@@ -50,7 +50,6 @@ public class AdminController {
     public String userId(@PathVariable("id") Long id, Model model) {
         User usercard = userRepository.findById(id).get();
         model.addAttribute("usercard", usercard);
-        //System.out.println(userRepository.findById(id));
         return "admin/usercard";
     }
 
@@ -62,7 +61,6 @@ public class AdminController {
 
     @GetMapping("/orders")
     public String ordersUsers(Model model) {
-        /*System.out.println(orderRepository.findAll());*/
         model.addAttribute("AllOrders", orderRepository.findAll());
 
         return "admin/adminorders/adminordersuser";
