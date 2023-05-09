@@ -24,7 +24,7 @@ public class UserValidator implements Validator {
     public void validate(Object o, Errors errors) {
         User user = (User) o;
 
-        //Username and password can't me empty or contain whitespace
+        //Username and password can't  empty or contain whitespace
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "error.not_empty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "error.not_empty");
 

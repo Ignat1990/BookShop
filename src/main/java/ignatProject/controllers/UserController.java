@@ -51,37 +51,3 @@ public class UserController {
 
 
 }
-
-
-
-  /*  @Autowired
-    protected UsersRepository usersRepository;
-
-
-    @GetMapping("/users")
-    public String findAll(Model model) {
-        List<Users> findUsers = usersRepository.findAll();
-        model.addAttribute("users", findUsers);
-        //model добавь в себя атрибут под названием юзерс(то что у нас указано на html стp,
-        //и сюда положи юзера, которого получили в результате данного запроса.
-        return "user-list";
-    }
-
-    @GetMapping("/user-create")
-    public String createUserForm(Model model) {
-        model.addAttribute("newuser", new Users());
-        return "user-create";
-    }
-
-
-    @PostMapping("/user-create")
-    public String createUser(@ModelAttribute("newuser") Users users, Model model) {
-        usersRepository.save(users);
-        return "redirect:/users";
-    }*/
-
-/*    @GetMapping("/user-delete/{id}")
-    public String deleteUser(@PathVariable("id") Long id) {
-        userService.deleteUser(id);
-        return "redirect:/users";
-    }*/

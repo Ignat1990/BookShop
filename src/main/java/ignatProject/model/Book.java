@@ -150,19 +150,6 @@ public class Book {
         this.usersvote = usersvote;
     }
 
-   /* @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return id == book.id && quantity == book.quantity && rating == book.rating && usersvote == book.usersvote && Objects.equals(supplier, book.supplier) && Objects.equals(name, book.name) && Objects.equals(bookGanre, book.bookGanre) && Objects.equals(description, book.description) && Objects.equals(imageUrl, book.imageUrl) && Objects.equals(author, book.author) && Objects.equals(price, book.price) && Objects.equals(reviews, book.reviews);
-    }*/
-
-    /*@Override
-    public int hashCode() {
-        return Objects.hash(id, supplier, name, bookGanre, description, imageUrl, author, price, quantity, reviews, rating, usersvote);
-    }*/
-
     @Override
     public String toString() {
         return "Book{" +

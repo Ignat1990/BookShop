@@ -31,29 +31,5 @@ import java.util.List;
 
 
 
-/*    List<Book> findAll();
 
-    boolean deleteBook(Long id);
-
-    boolean saveProduct(Book id);
-
-    boolean deleteBook(Long productId);
-
-    void updateBook(Long id, Book product);
-
-    long productsCount();
-
-    List<Book> findAllByBookGanreId(long bookrGanreId);
-
-    List<Book> findAllByCategoryId(long categoryId);
-
-    List<Book> findAllByOrderByIdAsc();
-
-    Book findById(long id);*/
-
-/*
-    long count();
-}
-
-*/
 

@@ -27,24 +27,3 @@ public interface BasketService {
     List<BasketService> findAllByOrder_id(long id);
 }
 
-/*
-
-public interface BasketService {
-
-    void addBook(Basket basket);
-
-    void removeProduct();
-
-    void clearBook();
-
-    Map<Basket, Integer> BooksInCart();
-
-    BigDecimal totalPrice();
-
-    void cartCheckout();
-
-    void deleteBasket(Long id);
-
-    Basket getBasket(Long id);
-    List<Basket> findAllByOrder_id(long id);
-}*/
